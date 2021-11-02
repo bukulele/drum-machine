@@ -28,7 +28,7 @@ function App() {
       playSoundOnMouseDown(event);
       colorizePad(document.getElementById(event.target.id));
     } else if (event.type === "keydown") {
-      let idx = lettersArr.indexOf(event.key.toUpperCase());
+      let idx = lettersArr.indexOf(event.code[event.code.length - 1]);
       playSoundOnKeyboardDown(event);
       colorizePad(document.getElementById(idx));
     }
@@ -38,7 +38,7 @@ function App() {
   };
 
   const keyboardListener = (event) => {
-    if (lettersArr.includes(event.key.toUpperCase())) {
+    if (lettersArr.includes(event.code[event.code.length - 1])) {
       play(event);
     }
   };
@@ -95,7 +95,7 @@ function App() {
   }
 
   function playSoundOnKeyboardDown(event) {
-    let letter = event.key.toUpperCase();
+    let letter = event.code[event.code.length - 1];
     sound = document.getElementById(letter);
     sound.pause();
     sound.currentTime = 0;
