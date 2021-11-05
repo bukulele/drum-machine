@@ -1,10 +1,12 @@
 import React from "react";
+import styles from "./ScrollBar.module.css";
 
 function ScrollBar(props) {
   return (
-    <div className="scrollBar">
+    <div className={styles.scrollBar}>
       <p>Sound volume</p>
       <input
+        className={styles.input}
         type="range"
         min="0"
         max="100"

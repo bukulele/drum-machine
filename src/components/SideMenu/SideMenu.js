@@ -1,6 +1,7 @@
 import React from "react";
-import SoundsLibrary from "./SoundsLibrary";
-import ScrollBar from "./ScrollBar";
+import SoundsLibrary from "../SoundsLibrary/SoundsLibrary";
+import ScrollBar from "../ScrollBar/ScrollBar";
+import styles from "./SideMenu.module.css";
 
 function SideMenu({
   displayInfo,
@@ -10,8 +11,8 @@ function SideMenu({
   handleVolumeChange,
 }) {
   return (
-    <div className="sideMenu">
-      <div id="display" className="display">
+    <div className={styles.sideMenu}>
+      <div id="display" className={styles.display}>
         {displayInfo}
       </div>
       <ScrollBar volume={volume} handleVolumeChange={handleVolumeChange} />

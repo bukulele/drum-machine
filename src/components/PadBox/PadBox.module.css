@@ -1,0 +1,31 @@
+/*
+main-color: #fcf9e6;
+main-color-light: #fff3ce;
+accent-bright: #a62b2b;
+grey: #494949;
+*/
+
+.padBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+  width: 25vw;
+  height: 25vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .padBox {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .padBox {
+    width: 90vw;
+    height: 90vw;
+  }
+}

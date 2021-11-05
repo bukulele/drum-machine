@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import PadBox from "./PadBox";
-import SideMenu from "./SideMenu";
+import PadBox from "./components/PadBox/PadBox";
+import SideMenu from "./components/SideMenu/SideMenu";
 import "./index.css";
-import SET_1 from "./soundSet1";
-import SET_2 from "./soundSet2";
-import SET_3 from "./soundSet3";
-import SET_4 from "./soundSet4";
-import SET_5 from "./soundSet5";
-import SET_6 from "./soundSet6";
-import SET_7 from "./soundSet7";
+import SET_1 from "./components/SoundSets/soundSet1";
+import SET_2 from "./components/SoundSets/soundSet2";
+import SET_3 from "./components/SoundSets/soundSet3";
+import SET_4 from "./components/SoundSets/soundSet4";
+import SET_5 from "./components/SoundSets/soundSet5";
+import SET_6 from "./components/SoundSets/soundSet6";
+import SET_7 from "./components/SoundSets/soundSet7";
 
 function App() {
   const [soundSet, setSoundSet] = useState(Object.values(SET_1));

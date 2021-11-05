@@ -1,0 +1,19 @@
+/*
+main-color: #fcf9e6;
+main-color-light: #fff3ce;
+accent-bright: #a62b2b;
+grey: #494949;
+*/
+
+.button {
+  border: none;
+  border-radius: 3px;
+  background-color: #494949;
+  color: #fcf9e6;
+  line-height: 100%;
+  text-align: center;
+  font-size: 1rem;
+  margin: 5px;
+  width: 3rem;
+  height: 2rem;
+}

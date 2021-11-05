@@ -1,5 +1,6 @@
 import React from "react";
-import Pad from "./Pad";
+import Pad from "../Pad/Pad";
+import styles from "./PadBox.module.css";
 
 function PadBox({ lettersArr, soundSet, mouseListener, soundNames }) {
   let padArray = [];
@@ -16,7 +17,7 @@ function PadBox({ lettersArr, soundSet, mouseListener, soundNames }) {
     );
   });
 
-  return <div className="padBox">{padArray}</div>;
+  return <div className={styles.padBox}>{padArray}</div>;
 }
 
 export default PadBox;

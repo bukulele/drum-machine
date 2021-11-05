@@ -1,0 +1,16 @@
+.soundsLibrary {
+  width: 100%;
+}
+
+.text {
+  margin: 0.5rem;
+  font-family: "Gowun Batang", serif;
+  color: #494949;
+  font-weight: bold;
+}
+
+.buttonsBlock {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,41 @@
+/*
+main-color: #fcf9e6;
+main-color-light: #fff3ce;
+accent-bright: #a62b2b;
+grey: #494949;
+*/
+
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25vw;
+  height: 30vw;
+}
+
+.display {
+  width: 100%;
+  border: 1px solid #494949;
+  height: 3rem;
+  text-align: center;
+  background-color: #494949;
+  color: #fcf9e6;
+  font-weight: bold;
+  line-height: 3rem;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sideMenu {
+    width: 40vw;
+    height: 45vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sideMenu {
+    width: 90vw;
+    height: 50vh;
+  }
+}

@@ -1,0 +1,43 @@
+/*
+main-color: #fcf9e6;
+main-color-light: #fff3ce;
+accent-bright: #a62b2b;
+grey: #494949;
+*/
+
+.scrollBar {
+  width: 100%;
+}
+.input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 0.3rem;
+  background-color: #a62b2b;
+  outline: none;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.5rem;
+  height: 1rem;
+  background-color: #a62b2b;
+  border: none;
+  cursor: pointer;
+}
+input::-moz-range-thumb {
+  appearance: none;
+  width: 0.5rem;
+  height: 1rem;
+  background-color: #a62b2b;
+  border: none;
+  cursor: pointer;
+}
+input::-ms-thumb {
+  appearance: none;
+  width: 0.5rem;
+  height: 1rem;
+  background-color: #a62b2b;
+  border: none;
+  cursor: pointer;
+}

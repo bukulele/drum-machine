@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Button/Button";
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import styles from "./SoundsLibrary.module.css";
 
 function SoundsLibrary(props) {
   let buttonArray = [];
@@ -18,9 +19,9 @@ function SoundsLibrary(props) {
   }
 
   return (
-    <div className="soundsLibrary">
-      <p>Sound library</p>
-      <div className="buttonsBlock">{buttonArray}</div>
+    <div className={styles.soundsLibrary}>
+      <p className={styles.text}>Sound library</p>
+      <div className={styles.buttonsBlock}>{buttonArray}</div>
     </div>
   );
 }
