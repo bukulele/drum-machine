@@ -1,18 +1,21 @@
 import React from "react";
 import Pad from "./Pad";
 
-function PadBox(props) {
+function PadBox({ lettersArr, soundSet, mouseListener, soundNames }) {
   let padArray = [];
-  padArray = props.lettersArr.map((elem, index) => (
-    <Pad
-      id={index}
-      src={props.soundSet[index]}
-      content={elem}
-      key={elem}
-      play={props.play}
-      soundName={props.soundNames[index]}
-    />
-  ));
+  padArray = lettersArr.map((element, index) => {
+    return (
+      <Pad
+        id={`Key${element}`}
+        src={soundSet[index]}
+        content={element}
+        key={element}
+        mouseListener={mouseListener}
+        soundName={soundNames[index]}
+      />
+    );
+  });
+
   return <div className="padBox">{padArray}</div>;
 }
 

@@ -23,25 +23,31 @@ function App() {
 
   let sound;
 
-  const play = (event) => {
-    if (event.type === "mousedown") {
-      playSoundOnMouseDown(event);
-      colorizePad(document.getElementById(event.target.id));
-    } else if (event.type === "keydown") {
-      let idx = lettersArr.indexOf(event.code[event.code.length - 1]);
-      playSoundOnKeyboardDown(event);
-      colorizePad(document.getElementById(idx));
-    }
-    sound.volume = volume / 100;
-    sound.play();
-    showDisplayInfo(sound.title);
+  const mouseListener = (object, event) => {
+    let element = object.current;
+    play(element);
+    colorizePad(event.target);
   };
 
   const keyboardListener = (event) => {
-    if (lettersArr.includes(event.code[event.code.length - 1])) {
-      play(event);
+    let idToPlay = event.code[event.code.length - 1];
+    let idToColorize = event.code;
+    if (lettersArr.includes(idToPlay)) {
+      let elementToPlay = document.getElementById(idToPlay);
+      let elementToColorize = document.getElementById(idToColorize);
+      play(elementToPlay);
+      colorizePad(elementToColorize);
     }
   };
+
+  function play(object) {
+    sound = object;
+    sound.volume = volume / 100;
+    sound.pause();
+    sound.currentTime = 0;
+    sound.play();
+    showDisplayInfo(sound.title);
+  }
 
   const changeSoundSet = (event) => {
     let newSet;
@@ -88,19 +94,6 @@ function App() {
     };
   });
 
-  function playSoundOnMouseDown(event) {
-    sound = event.target.children[event.target.innerText];
-    sound.pause();
-    sound.currentTime = 0;
-  }
-
-  function playSoundOnKeyboardDown(event) {
-    let letter = event.code[event.code.length - 1];
-    sound = document.getElementById(letter);
-    sound.pause();
-    sound.currentTime = 0;
-  }
-
   function showDisplayInfo(data) {
     setDisplayInfo(() => {
       if (timer) {
@@ -122,7 +115,7 @@ function App() {
         soundSet={soundSet}
         soundNames={soundNames}
         lettersArr={lettersArr}
-        play={play}
+        mouseListener={mouseListener}
       />
       <SideMenu
         displayInfo={displayInfo}

@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 
-function Pad(props) {
+function Pad({ id, content, src, soundName, mouseListener }) {
+  const audioRef = useRef();
+  const handleMouseDown = (event) => {
+    mouseListener(audioRef, event);
+  };
   return (
-    <button id={props.id} className="drum-pad" onMouseDown={props.play}>
-      {props.content}
+    <button id={id} className="drum-pad" onMouseDown={handleMouseDown}>
+      {content}
       <audio
-        id={props.content}
-        src={props.src}
+        ref={audioRef}
+        id={content}
+        src={src}
         className="clip"
         preload="true"
-        title={props.soundName}
+        title={soundName}
       ></audio>
     </button>
   );

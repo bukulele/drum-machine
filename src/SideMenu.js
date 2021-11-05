@@ -2,19 +2,22 @@ import React from "react";
 import SoundsLibrary from "./SoundsLibrary";
 import ScrollBar from "./ScrollBar";
 
-function SideMenu(props) {
+function SideMenu({
+  displayInfo,
+  colorizedButtonId,
+  changeSoundSet,
+  volume,
+  handleVolumeChange,
+}) {
   return (
     <div className="sideMenu">
       <div id="display" className="display">
-        {props.displayInfo}
+        {displayInfo}
       </div>
-      <ScrollBar
-        volume={props.volume}
-        handleVolumeChange={props.handleVolumeChange}
-      />
+      <ScrollBar volume={volume} handleVolumeChange={handleVolumeChange} />
       <SoundsLibrary
-        colorizedButtonId={props.colorizedButtonId}
-        changeSoundSet={props.changeSoundSet}
+        colorizedButtonId={colorizedButtonId}
+        changeSoundSet={changeSoundSet}
       />
     </div>
   );
