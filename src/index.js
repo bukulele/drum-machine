@@ -88,9 +88,9 @@ function App() {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", keyboardListener);
+    window.addEventListener("keydown", keyboardListener);
     return () => {
-      document.removeEventListener("keydown", keyboardListener);
+      window.removeEventListener("keydown", keyboardListener);
     };
   });
 
