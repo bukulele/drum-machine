@@ -4,7 +4,7 @@ import styles from "./ScrollBar.module.css";
 function ScrollBar(props) {
   return (
     <div className={styles.scrollBar}>
-      <p>Sound volume</p>
+      <p className={styles.text}>Sound volume</p>
       <input
         className={styles.input}
         type="range"

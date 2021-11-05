@@ -24,6 +24,7 @@ grey: #494949;
   font-weight: bold;
   line-height: 3rem;
   border-radius: 3px;
+  font-family: "Gowun Batang", serif;
 }
 
 @media only screen and (max-width: 1200px) {

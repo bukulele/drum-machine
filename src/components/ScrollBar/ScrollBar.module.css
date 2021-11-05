@@ -17,7 +17,7 @@ grey: #494949;
   outline: none;
 }
 
-input::-webkit-slider-thumb {
+.input::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 0.5rem;
   height: 1rem;
@@ -25,7 +25,7 @@ input::-webkit-slider-thumb {
   border: none;
   cursor: pointer;
 }
-input::-moz-range-thumb {
+.input::-moz-range-thumb {
   appearance: none;
   width: 0.5rem;
   height: 1rem;
@@ -33,11 +33,18 @@ input::-moz-range-thumb {
   border: none;
   cursor: pointer;
 }
-input::-ms-thumb {
+.input::-ms-thumb {
   appearance: none;
   width: 0.5rem;
   height: 1rem;
   background-color: #a62b2b;
   border: none;
   cursor: pointer;
+}
+
+.text {
+  margin: 0.5rem;
+  font-family: "Gowun Batang", serif;
+  color: #494949;
+  font-weight: bold;
 }
