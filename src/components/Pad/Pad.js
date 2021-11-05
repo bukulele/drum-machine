@@ -9,7 +9,7 @@ function Pad({ id, content, src, soundName, mouseListener }) {
   return (
     <button
       id={id}
-      className={styles["drum-pad"]}
+      className={`drum-pad ${styles.drumPad}`}
       onMouseDown={handleMouseDown}
     >
       {content}
